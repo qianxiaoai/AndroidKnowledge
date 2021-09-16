@@ -1,10 +1,13 @@
-package com.example.babytree.xiaoaidemo;
+package com.example.xiaoaidemo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+
+import com.xiaoai.kotlin.base.BaseActivity;
+
+
+public class MainActivity extends BaseActivity {
 
     private static String TAG = "xiaoxiao";
 
@@ -15,10 +18,18 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "xiaoxiao  onCreate");//可以带返回值
 
         reverse(1534236469);
+
+//        Retrofit retrofit = new Retrofit.Builder().baseUrl("")
+//                .addConverterFactory(GsonFac)
+//                .build();
+//        ViewModelProviders
     }
 
 
-
+    @Override
+    public Object onRetainCustomNonConfigurationInstance() {
+        return super.onRetainCustomNonConfigurationInstance();
+    }
 
     public int reverse(int x) {
 
